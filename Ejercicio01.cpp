@@ -11,11 +11,19 @@ void convertirMayusIniciales(char cadena[]) {
         }
         n++;
     }
-    cout << cadena << endl;
+    cout << "Frase convertida : " << cadena << endl;
+}
+
+void decoracion() {
+    cout << "-----------------------------------------------" << endl;
+    cout << "CONVERTIDOR DE PALABRAS A MAYUSCULAS INICIALES" << endl;
+    cout << "-----------------------------------------------" << endl;
 }
 
 int main(){
+    decoracion();
     char frase[] = "caceres patrimonio de la humanidad";
+    cout << "Frase original   : " << frase << endl;
     convertirMayusIniciales(frase);
     return 0;
 }
