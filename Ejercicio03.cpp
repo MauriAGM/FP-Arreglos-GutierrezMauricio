@@ -7,7 +7,7 @@ void contarOcurrencias(char cadena[], char letra, int &contadorLetras) {
     int n = 0;
     contadorLetras = 0;
     while (cadena[n] != '\0') {
-        if (cadena[n] == letra) {
+        if (cadena[n] == letra || cadena[n] == toupper(letra) || cadena[n] == tolower(letra)) {
             contadorLetras++;
         }
         n++;
@@ -15,7 +15,9 @@ void contarOcurrencias(char cadena[], char letra, int &contadorLetras) {
 }
 
 void leerCadena(char cadena[]) {
-    cout << "Ingrese una frase: ";
+    cout << "==========================================" << endl; 
+    cout << "   CONTADOR DE OCURRENCIAS DE UNA LETRA   " << endl;
+    cout << "\nIngrese una frase: ";
     cin.getline(cadena, 200); 
 }
 
@@ -27,4 +29,7 @@ int main(){
     cin >> letra;
     contarOcurrencias(cadena, letra, contadorLetras);
     cout << "La letra '" << letra << "' aparece " << contadorLetras << " veces en la frase." << endl;
+    cout << "\nFin del programa....." << endl;
+    cout << "==========================================" << endl;
+    return 0;
 }
