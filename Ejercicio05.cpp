@@ -31,14 +31,22 @@ void compararNumeros(int cadena[], int n) {
         }
     }
 
-    cout << "Numero mayor: " << mayor << " (repite " << repiteMayor << " veces)";
+    cout << "Numero mayor: " << mayor << " (repite " << repiteMayor << " veces)\n";
     cout << "Numero menor: " << menor << " (repite " << repiteMenor << " veces)";
 }
 
 int main() {
     int cadena[MAX];
     int n;
-    cin >> n;
+    cout << "=================================================" << endl; 
+    cout << "     CONTADOR DE REPETICIONES DE MAYOR/MENOR     " << endl;
+    do {
+        cout << "Cuantos numeros desea ingresar? (1 a " << MAX << "): ";
+        cin >> n;
+        if (n < 1 || n > MAX) {
+            cout << "Error. Cantidad no valida.\n";
+        }
+    } while (n < 1 || n > MAX);
     leerNnumeros(cadena, n);
     compararNumeros(cadena, n);
     return 0;
