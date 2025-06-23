@@ -10,6 +10,7 @@ void generar(int v[]) {
     srand(time(0));
     for (int i = 0; i < 30; i++)
         v[i] = rand() % 901 + 100;
+    cout << "Numeros generados:\n";
     for (int i = 0; i < 30; i++)
         cout << v[i] << " ";
     cout << endl;
@@ -39,17 +40,16 @@ void calcularEstadisticas(int v[]) {
     int moda = v[0], maxRepite = 0;
     for (int i = 0; i < 30; i++) {
         int repite = 1;
-        for (int j = i + 1; j < 30; j++){
+        for (int j = i + 1; j < 30; j++)
             if (v[i] == v[j]) repite++;
-        }
         if (repite > maxRepite) {
             maxRepite = repite;
             moda = v[i];
         }
     };
-    cout << media << endl;
-    cout << mediana << endl;
-    cout << moda << endl;
+    cout << "Media   : " << media << endl;
+    cout << "Mediana : " << mediana << endl;
+    cout << "Moda    : " << moda << endl;
 }
 int main() {
     int vec[30];
