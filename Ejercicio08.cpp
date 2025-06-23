@@ -1,4 +1,5 @@
 //Comprobar si un número de 10 cifras es capicúa usando un vector.
+//Error en el commit
 #include <iostream>
 using namespace std;
 
@@ -22,7 +23,7 @@ void leerCifras(int vect[], int n) {
 int main() {
     int n;
     cout << "================================================" << endl;
-    cout << "      COMPROBADOR DE CAPICÚAS DE 10 CIFRAS      " << endl;
+    cout << "      COMPROBADOR DE CAPICUAS DE 10 CIFRAS      " << endl;
     cout << "Ingrese la cantidad de cifras del numero (1 al 10): ";
     cin >> n;
     if (n <= 1 || n > 10){
