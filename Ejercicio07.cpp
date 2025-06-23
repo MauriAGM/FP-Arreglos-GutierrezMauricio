@@ -6,11 +6,13 @@ const int MAX = 200;
 
 void leerVector(int vec[], int n) {
     for (int i = 0; i < n ; i++){
+        cout << "Elemento [" << i << "]: " ;
         cin >> vec[i];
     }
 }
 
 void invertirImprimir(int vec[], int n){
+    cout << "\nVector invertido -----" << endl;
     int temp;
     for (int i = 0; i < n / 2 ; i++ ){
         temp = vec[i];
@@ -25,8 +27,14 @@ void invertirImprimir(int vec[], int n){
 int main(){
     int vec[MAX];
     int n; 
-    cin >> n; 
-
+    cout << "===================================================" << endl; 
+    cout << "        INVERTIR LOS ELEMENTOS DE UN VECTOR        " << endl;
+    cout << "Cuantos elementos tendra el vector? (1 a " << MAX << "): ";
+    cin >> n;
+    if (n < 1 || n > MAX) {
+        cout << "Error. Cantidad invalida." << endl;
+        return 1;
+    }
     leerVector(vec, n);
     invertirImprimir(vec, n);
     return 0;
