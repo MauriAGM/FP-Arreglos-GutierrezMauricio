@@ -3,7 +3,9 @@
 using namespace std;
 
 void leerVector(int vec[], int n) {
+    cout << "Ingrese los " << n << " elementos del vector:\n";
     for (int i = 0; i < n; i++) {
+        cout << "Elemento [" << i << "]: ";
         cin >> vec[i];
     }
 }
@@ -14,13 +16,17 @@ void rotarImprimir(int vec[], int n) {
         vec[i] = vec[i - 1];
     }
     vec[0] = ultimo; 
+    cout << "\nVector rotado a la derecha: " << endl;
     for (int i = 0; i < n; i++) {
-        cout << vec[i] << endl;
+        cout << "Elemento [" << i << "]: " << vec[i] << endl;
     }
 }
 
 int main() {
     int n;
+    cout << "================================================" << endl;
+    cout << "  ROTACION DE VECTOR UNA POSICION A LA DERECHA  " << endl;
+    cout << "Cantidad de elementos: ";
     cin >> n;
     int vec[n];
     if (n < 1) {
