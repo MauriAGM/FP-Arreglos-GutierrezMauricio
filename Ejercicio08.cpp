@@ -12,6 +12,7 @@ bool capicua(int vect[], int n){
 }
 
 void leerCifras(int vect[], int n) {
+    cout << "Ingrese " << n << " cifras separadas:\n";
     for (int i = 0; i < n; i++) {
         cout << "Cifra [" << i << "]: ";
         cin >> vect[i];
@@ -20,7 +21,14 @@ void leerCifras(int vect[], int n) {
 
 int main() {
     int n;
+    cout << "================================================" << endl;
+    cout << "      COMPROBADOR DE CAPICÚAS DE 10 CIFRAS      " << endl;
+    cout << "Ingrese la cantidad de cifras del numero (1 al 10): ";
     cin >> n;
+    if (n <= 1 || n > 10){
+        cout << "Error. Cifra invalida. ";
+        return 1;
+    }
     int vect[n];
     leerCifras(vect, n);
     if (capicua(vect, n)) {
